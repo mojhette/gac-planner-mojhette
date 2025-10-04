@@ -1,6 +1,6 @@
 {
-  "name": "SWGOH GAC Planner",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "name": "SWGOH GAC Planner - Fast Start",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22-bullseye",
   "postCreateCommand": "npm ci || (echo 'npm ci failed, running npm install' && npm install)",
   "customizations": {
     "vscode": {
@@ -18,12 +18,11 @@
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "version": "22"
-    },
-    "ghcr.io/devcontainers/features/git:1": {},
-    "ghcr.io/devcontainers/features/github-cli:1": {}
+    }
   },
   "hostRequirements": {
-    "cpus": 4,
-    "memory": "8gb"
-  }
+    "cpus": 2,
+    "memory": "4gb"
+  },
+  "shutdownAction": "stopContainer"
 }
