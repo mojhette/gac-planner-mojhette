@@ -1,0 +1,25 @@
+{
+  "name": "gac-planner-mojhette",
+  "version": "0.1.0",
+  "description": "Minimal package.json added to fix npm ENOENT error",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "mojhette",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.58.0",
+    "axios": "^1.12.2",
+    "dotenv": "^17.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mojhette/gac-planner-mojhette.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/mojhette/gac-planner-mojhette/issues"
+  },
+  "homepage": "https://github.com/mojhette/gac-planner-mojhette#readme"
+}
