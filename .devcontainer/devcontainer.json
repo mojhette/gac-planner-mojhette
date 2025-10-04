@@ -1,34 +1,29 @@
 {
   "name": "SWGOH GAC Planner",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
-  "postCreateCommand": "npm ci || npm install",
+  "postCreateCommand": "npm ci || (echo 'npm ci failed, running npm install' && npm install)",
   "customizations": {
     "vscode": {
       "settings": {
-        "editor.formatOnSave": true,
-        "terminal.integrated.shellIntegration.enabled": true
+        "editor.formatOnSave": true
       },
       "extensions": [
         "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "bradlc.vscode-tailwindcss",
-        "formulahendry.auto-close-tag",
-        "formulahendry.auto-rename-tag"
+        "esbenp.prettier-vscode"
       ]
     }
   },
   "forwardPorts": [3000, 5432],
   "remoteUser": "node",
-  "updateContentCommand": "npm ci",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    },
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
   "hostRequirements": {
     "cpus": 4,
     "memory": "8gb"
-  },
-  "features": {
-    "ghcr.io/devcontainers/features/git:1": {},
-    "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "22"
-    }
   }
 }
